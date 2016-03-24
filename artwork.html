@@ -1,4 +1,9 @@
 
-<div id="artwork" ng-controller="ArtworkController as artwork">
-  <div ng-repeat="image in artwork.images">{{ image }}</div>
+<div id="artwork" ng-controller="ArtworkController as artwork" class="container">
+  <h1>this is artwork
+    <div class="row">
+      <div ng-repeat="image in artwork.images" ng-style="{ &quot;background-image&quot;: &quot;url('{{ image.url }}')&quot; }" class="artwork-tile"></div>
+    </div>
+    <!--img.img-responsive.center-block.thumbnail.col-md-4-->
+  </h1>
 </div>
