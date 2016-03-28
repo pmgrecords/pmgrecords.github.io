@@ -1,2 +1,32 @@
 
-<h1>Contact Me</h1>
+<div class="contact row">
+  <div class="col-sm-12 contact-form-container">
+    <form novalidate="novalidate" name="form" ng-show="!contact.emailSent" class="form-horizontal">
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <h3>Send us a message</h3>
+        </div>
+      </div>
+      <div ng-class="{ 'has-error' : form.email.$invalid &amp;&amp; form.email.$touched }" class="form-group">
+        <label class="control-label col-sm-2">Email</label>
+        <div class="col-sm-8">
+          <input type="text" ng-model="contact.contactForm.email" name="email" maxlength="255" required="required" ng-pattern="/^[_a-z0-9]+(.[_a-z0-9]+)*@[a-z0-9-]+(.[a-z0-9-]+)*(.[a-z]{2,4})$/" class="form-control"/>
+          <div ng-show="form.email.$touched" class="error"><span ng-show="form.email.$error.required || form.email.$error.pattern">Email address is required.</span></div>
+        </div>
+      </div>
+      <div ng-class="{ 'has-error' : form.message.$invalid &amp;&amp; form.message.$touched }" class="form-group">
+        <label class="control-label col-sm-2">Message</label>
+        <div class="col-sm-8">
+          <textarea ng-model="contact.contactForm.message" name="message" required="required" rows="8" class="form-control"></textarea>
+          <div ng-show="form.message.$touched" class="error"><span ng-show="form.message.$error.required">Message is required.</span></div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <button type="button" ng-disabled="form.$invalid" ng-click="contact.emailSent = true" class="btn btn-warning">Send</button>
+        </div>
+      </div>
+    </form>
+    <h3 ng-show="contact.emailSent" class="email-sent">Thanks for your feedback!<br/>We'll respond as soon as we can.</h3>
+  </div>
+</div>

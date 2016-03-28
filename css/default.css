@@ -1,3 +1,6 @@
+h1, h2, h3, h4 {
+  color: #DEAD42; }
+
 body {
   background-color: black;
   color: #B6BAB2;
@@ -8,6 +11,9 @@ body {
   .artwork-tile img {
     height: 180px; }
 
+.navbar-brand img {
+  width: 172px; }
+
 .landing {
   text-align: center; }
   .landing a {
@@ -16,3 +22,16 @@ body {
   .landing img {
     width: 100%;
     max-width: 575px; }
+
+.contact p.contact-info {
+  color: gray; }
+
+.contact p.contact-info strong {
+  color: black; }
+
+.contact .contact-form-container {
+  border-left: 1px solid black; }
+
+.contact input, .contact textarea {
+  background-color: black;
+  color: #B6BAB2; }

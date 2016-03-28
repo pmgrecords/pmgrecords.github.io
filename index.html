@@ -18,7 +18,7 @@
   <body ng-app="PMG Records" ng-controller="SiteController as site">
     <nav role="navigation" ng-show="site.showNavigation" class="menu navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-header">
-        <button type="button" ng-init="navCollapsed = true" ng-click="navCollapsed = !navCollapsed" class="navbar-toggle"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="/home" ng-class="{ &quot;active&quot;: site.isActive(&quot;/home&quot;) }" class="navbar-brand">PMG Records</a>
+        <button type="button" ng-init="navCollapsed = true" ng-click="navCollapsed = !navCollapsed" class="navbar-toggle"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="/home" ng-class="{ &quot;active&quot;: site.isActive(&quot;/home&quot;) }" class="navbar-brand"><img src="images/navbar-brand.jpg"></a>
       </div>
       <div ng-class="{ in : !navCollapsed }" ng-click="navCollapsed=true" class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
