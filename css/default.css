@@ -1,4 +1,4 @@
-h1, h2, h3, h4 {
+h1, h2, h3, h4, a {
   color: #DEAD42; }
 
 body {
@@ -35,3 +35,16 @@ body {
 .contact input, .contact textarea {
   background-color: black;
   color: #B6BAB2; }
+
+.store .product-tile {
+  border: 1px solid #DEAD42;
+  width: 120px;
+  height: 180px;
+  transition: all 1s;
+  background-color: black; }
+
+.store .product-tile:hover {
+  transform: scale(1.4); }
+
+.store .product-tile-container {
+  margin-bottom: 40px; }

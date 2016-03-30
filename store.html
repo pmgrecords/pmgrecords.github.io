@@ -1,2 +1,8 @@
 
-<h1>this is store</h1>
+<div ng-controller="StoreController as store" class="store">
+  <div class="row">
+    <div ng-repeat="product in store.products" class="col-sm-3 product-tile-container">
+      <div class="product-tile"></div>
+    </div>
+  </div>
+</div>
