@@ -1,5 +1,7 @@
 
 <div ng-controller="MusicController as music" class="music">
   <div ng-repeat="artist in music.artists" class="row"><a href="{{ artist.url }}">
-      <div class="h3">{{ artist.name }}</div></a></div>
+      <div class="h3">{{ artist.name }}</div></a>
+    <iframe width="50%" height="300" scrolling="no" frameborder="no" ng-src="{{ music.soundCloudUrl(artist) | trusted }}"></iframe>
+  </div>
 </div>
