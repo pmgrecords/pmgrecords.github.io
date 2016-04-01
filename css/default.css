@@ -11,6 +11,29 @@ body {
   .artwork-tile img {
     height: 180px; }
 
+.events .event {
+  margin-bottom: 40px; }
+
+.events .event-flyer img {
+  width: 100%; }
+
+.events .event-flyer {
+  margin: 0 auto;
+  max-width: 540px; }
+
+.artist-tile {
+  width: 320px;
+  margin-bottom: 20px; }
+  .artist-tile iframe {
+    width: 300px;
+    height: 300px; }
+  @media screen and (max-width: 768px) {
+    .artist-tile {
+      text-align: center;
+      width: 100%; }
+      .artist-tile iframe {
+        width: 80%; } }
+
 .navbar-brand img {
   width: 172px; }
 
