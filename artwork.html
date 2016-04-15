@@ -1,5 +1,5 @@
 
-<div id="artwork" ng-controller="ArtworkController as artwork" class="container">
+<div ng-controller="ArtworkController as artwork" class="artwork container">
   <div class="row">
     <div ng-repeat="image in artwork.images" class="col-xs-3">
       <div class="artwork-tile"><a href="{{ image.url }}" target="_"><img ng-src="{{ image.url }}"/></a></div>

@@ -6,9 +6,57 @@ body {
   color: #B6BAB2;
   padding: 60px 30px 30px 30px; }
 
-.artwork-tile {
+input[type='text'], input[type='password'], .contact textarea {
+  background-color: black;
+  color: #B6BAB2; }
+
+label {
+  color: #DEAD42; }
+
+ul.admin-nav {
+  list-style: none;
+  padding: 8px;
+  text-align: center;
+  user-select: none; }
+
+.record {
+  border: 1px solid #DEAD42;
+  padding: 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px; }
+
+@media screen and (max-width: 768px) {
+  ul.admin-nav li {
+    display: block; } }
+
+ul.admin-nav li {
+  display: inline;
+  margin-right: 20px;
+  padding: 10px 20px; }
+
+ul.nav.navbar-nav li a:hover {
+  color: #DEAD42; }
+
+ul.admin-nav li a:hover {
+  color: #DEAD42; }
+
+ul.admin-nav li.active {
+  background-color: #DEAD42; }
+
+ul.admin-nav li.active a {
+  color: black; }
+
+ul.admin-nav li:last-child {
+  margin-right: 0; }
+
+ul.admin-nav li a {
+  color: #B6BAB2;
+  text-decoration: none; }
+
+.artwork .artwork-tile {
   text-align: center; }
-  .artwork-tile img {
+  .artwork .artwork-tile img {
     height: 180px; }
 
 .events .event {
@@ -23,13 +71,13 @@ body {
 
 .artist-tile {
   width: 320px;
-  margin-bottom: 20px; }
+  margin: 0 auto 20px auto;
+  text-align: center; }
   .artist-tile iframe {
     width: 300px;
     height: 300px; }
   @media screen and (max-width: 768px) {
     .artist-tile {
-      text-align: center;
       width: 100%; }
       .artist-tile iframe {
         width: 80%; } }
@@ -55,19 +103,27 @@ body {
 .contact .contact-form-container {
   border-left: 1px solid black; }
 
-.contact input, .contact textarea {
-  background-color: black;
-  color: #B6BAB2; }
-
 .store .product-tile {
   border: 1px solid #DEAD42;
   width: 120px;
   height: 180px;
-  transition: all 1s;
-  background-color: black; }
+  transition: all 0.3s;
+  background-color: black;
+  margin: 0 auto 40px auto; }
 
 .store .product-tile:hover {
   transform: scale(1.4); }
 
-.store .product-tile-container {
-  margin-bottom: 40px; }
+@media screen and (max-width: 480px) {
+  .store .product-tile-container {
+    width: 50%; } }
+
+@media screen and (max-width: 320px) {
+  .store .product-tile-container {
+    width: 100%; } }
+
+.videos .video-tile {
+  text-align: center; }
+
+.videos iframe {
+  width: 200px; }

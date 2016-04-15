@@ -1,8 +1,10 @@
 
 <div ng-controller="VideosController as videos" class="videos">
   <div class="row">
-    <div ng-repeat="video in videos.videos" class="col-lg-3 col-md-4 col-xs-6">
-      <iframe ng-src="{{ video | trusted }}" allowfullscreen="allowfullscreen" frameborder="0" class="youtube-player"></iframe>
+    <div ng-repeat="video in videos.videos" class="col-lg-3 col-md-4 col-xs-6 video-tile-container">
+      <div class="video-tile">
+        <iframe ng-src="{{ video.url | trusted }}" allowfullscreen="allowfullscreen" frameborder="0" class="youtube-player"></iframe>
+      </div>
     </div>
   </div>
 </div>

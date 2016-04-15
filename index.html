@@ -13,6 +13,7 @@
     <script type="text/javascript" src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
     <script type="text/javascript" src="js/module.js"></script>
     <script type="text/javascript" src="js/config.js"></script>
+    <script type="text/javascript" src="js/initialize.js"></script>
     <script type="text/javascript" src="js/site.controller.js"></script>
     <script type="text/javascript" src="js/landing.controller.js"></script>
     <script type="text/javascript" src="js/artwork.controller.js"></script>
@@ -20,8 +21,14 @@
     <script type="text/javascript" src="js/music.controller.js"></script>
     <script type="text/javascript" src="js/store.controller.js"></script>
     <script type="text/javascript" src="js/events.controller.js"></script>
+    <script type="text/javascript" src="js/login.controller.js"></script>
+    <script type="text/javascript" src="js/user.service.js"></script>
+    <script type="text/javascript" src="js/artists.service.js"></script>
+    <script type="text/javascript" src="js/videos.service.js"></script>
+    <script type="text/javascript" src="js/store.service.js"></script>
+    <script type="text/javascript" src="js/events.service.js"></script>
     <script type="text/javascript" src="js/trusted.filter.js"></script>
-    <script type="text/javascript" src="js/server.constant.js"></script>
+    <script type="text/javascript" src="js/api.constant.js"></script>
   </head>
   <body ng-app="PMG Records" ng-controller="SiteController as site">
     <nav role="navigation" ng-show="site.showNavigation" class="menu navbar navbar-inverse navbar-fixed-top">
@@ -35,6 +42,9 @@
       </div>
     </nav>
     <div class="container-fluid">
+      <ul ng-show="site.isAdmin" class="admin-nav">
+        <li ng-repeat="item in site.adminMenu" ng-class="{ &quot;active&quot;: site.isActive(&quot;/{{ item.url }}&quot;)}"><a href="/{{ item.url }}">{{ item.name }}</a></li>
+      </ul>
       <ng-view></ng-view>
     </div>
   </body>
