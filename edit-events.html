@@ -1,6 +1,9 @@
 
 <div ng-controller="EventsController as events" class="edit-videos">
   <div class="form-horizontal">
+    <div class="row">
+      <button type="button" ng-click="events.add()" class="btn btn-warning">Add</button>
+    </div>
     <div ng-repeat="event in events.events" class="record row">
       <div class="form-group">
         <label class="control-label col-sm-2">Name</label>

@@ -1,6 +1,9 @@
 
 <div ng-controller="VideosController as videos" class="edit-videos">
   <div class="form-horizontal">
+    <div class="row">
+      <button type="button" ng-click="videos.add()" class="btn btn-warning">Add</button>
+    </div>
     <div ng-repeat="video in videos.videos" class="record row">
       <div class="form-group">
         <label class="control-label col-sm-2">Order</label>

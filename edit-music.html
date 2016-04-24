@@ -1,6 +1,9 @@
 
 <div ng-controller="MusicController as music" class="edit-music">
   <div class="form-horizontal">
+    <div class="row">
+      <button type="button" ng-click="music.add()" class="btn btn-warning">Add</button>
+    </div>
     <div ng-repeat="artist in music.artists" class="record row">
       <div class="form-group">
         <label class="control-label col-sm-2">Name</label>

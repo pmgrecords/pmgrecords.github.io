@@ -2,11 +2,12 @@
     angular.module('PMG Records').controller('StoreController', StoreController);
 
     StoreController.$inject = [];
-    
+
     function StoreController() {
         var vm = this;
-        
-        vm.products = (function() {
+        vm.add = add;
+
+        vm.products = (function () {
             var products = [];
             for (var i = 0; i < 20; i++) {
                 products.push({});
@@ -18,6 +19,10 @@
         //     .then(function(products) {
         //         vm.products = products;
         //     });
+
+        function add() {
+            vm.products.unshift({})
+        }
     }
 })();
 
